@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-com-volume
+  labels:
+    app: app-com-volume
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-com-volume
+  template:
+    metadata:
+      labels:
+        app: app-com-volume
+    spec:
+      containers:
+      - name: app
+        image: nginx:alpine
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: storage
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: storage
+        persistentVolumeClaim:
+          claimName: pvc-local
