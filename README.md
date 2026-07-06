@@ -11,6 +11,10 @@ Projetos praticos de Kubernetes do basico ao intermediario.
 | 03-service | Exposicao de aplicacoes |
 | 04-configmap-secret | Configuracoes e dados sensiveis |
 | 05-namespace | Isolamento de ambientes |
+| 06-liveness-readiness | Probes de saude dos containers |
+| 07-persistent-volume | Armazenamento persistente |
+| 08-ingress | Roteamento de trafego HTTP |
+| 09-hpa | Escalonamento automatico horizontal |
 
 ## Pre-requisitos
 
